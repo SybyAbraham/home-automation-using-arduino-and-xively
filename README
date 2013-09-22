@@ -1,6 +1,6 @@
 /*     
 
-      Home automation using Arduino and Xively v1.3
+      Home automation using Arduino and Xively v1.3.1
 ---------------------------------------------------------
 
 Features in v1.3.1

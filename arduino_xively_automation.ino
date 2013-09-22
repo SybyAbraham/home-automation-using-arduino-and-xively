@@ -3,7 +3,7 @@
       Home automation using Arduino and Xively v1.3
 ---------------------------------------------------------
 
-Features in v1.3
+Features in v1.3.1
 
 -  Temperature sensing
 -  Digital push button control for Air conditioners.
@@ -30,10 +30,11 @@ int acPin = 9;
 // MAC address for your Ethernet shield
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
-char xivelyKey[] = "5umYmLpEVtUi6wkR9vxdv4bBF973TZHprZIxdDXas4038myJ";
+//Your Xively key
+char xivelyKey[] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
-//your xively feed ID
-#define xivelyFeed 1134831932
+//Your Xively feed ID
+#define xivelyFeed xxxxxxxxxx
 
 // Define the strings for our datastream IDs
 char sensorId[] = "Temperature";
@@ -72,7 +73,7 @@ void setup() {
 
 void loop() {
   
-  //adjust LED level. set from Xively
+  //Pull AC state from Xively
   int getReturn = xivelyclient.get(feed, xivelyKey);    //get data from xively
   if(getReturn > 0)
   {
@@ -81,7 +82,7 @@ void loop() {
   }
   else Serial.println("HTTP Error");
   
-  //Switch on and off AC relay and beep once.
+  //Switch on then off AC relay and beep once.
 
   if(feed[1].getFloat() >= 1)
   {
@@ -117,5 +118,3 @@ void loop() {
   delay(5000);
 
 }
-
-

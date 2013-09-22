@@ -1,0 +1,15 @@
+/*     
+
+      Home automation using Arduino and Xively v1.3
+---------------------------------------------------------
+
+Features in v1.3
+
+-  Temperature sensing
+-  Digital push button control for Air conditioners.
+-  Beep when air conditioner is digitally activated. 
+-  Two light control channels.
+
+| Syby Abraham 2013 |
+       
+*/
